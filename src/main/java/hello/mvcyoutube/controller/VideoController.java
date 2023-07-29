@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 @Slf4j
 @Controller
 @RequiredArgsConstructor
@@ -23,8 +25,10 @@ public class VideoController {
     @GetMapping("/{videoId}")
     public String video(@PathVariable Integer videoId, Model model) {
         Video video = videoService.clicked(videoId);
+        List<Video> videos = videoService.findAll();
         model.addAttribute("video", video);
-        return "video/video" + videoId;
+        model.addAttribute("videos", videos);
+        return "video/videoView";
     }
 
 }

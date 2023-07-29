@@ -16,7 +16,7 @@ public class DefaultData {
     @PostConstruct
     public void init() {
         videoService.save(new Video("[백준] 달이 차오른다, 가자 해설강의", 0));
-        videoService.save(new Video("개발과정 함께 보시죠~1", 0));
+        videoService.save(new Video("개발과정 함께 보시죠~!", 0));
         videoService.save(new Video("테스트 샘플 영상 입니다.", 0));
     }
 }

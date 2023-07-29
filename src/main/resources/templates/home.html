@@ -47,13 +47,6 @@
 
 <div class="d-flex" style="height: 87vh;">
 
-<!--<nav class="nav flex-column col-2">-->
-<!--  <a class="nav-link active" aria-current="page" href="#">Active</a>-->
-<!--  <a class="nav-link" href="#">Link</a>-->
-<!--  <a class="nav-link" href="#">Link</a>-->
-<!--  <a class="nav-link ">Disabled</a>-->
-<!--</nav>-->
-
    <div class="b-example-divider b-example-vr"></div>
 
   <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 230px;">
@@ -131,13 +124,12 @@
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
-        <a href="video/1" th:each="video:${videos}" th:href="@{|/video/${video.id}|}">
+        <a th:each="video:${videos}" href="video/1" th:href="@{|/video/${video.id}|}">
         <div class="col">
           <div class="card border-white">
             <img src="image/thumbnail1.png"
                  th:src="@{|image/${video.id}.png|}"
                  class="card-img-top rounded-pill" width="300" height="250" alt="...">
-
             <div class="card-body">
               <p class="card-text" th:text="${video.videoName}">동영상 제목</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -146,6 +138,7 @@
             </div>
           </div>
         </div></a>
+
       </div>
     </div>
   </div>

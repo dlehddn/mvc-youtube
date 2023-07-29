@@ -20,6 +20,6 @@ public class HomeController {
     public String home(Model model) {
         List<Video> videos = videoService.findAll();
         model.addAttribute("videos", videos);
-        return "index";
+        return "home";
     }
 }

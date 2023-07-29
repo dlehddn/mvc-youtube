@@ -46,57 +46,29 @@
 <div class="d-flex container" style="height: 100vh;">
 <!--좌측 열-->
     <div class="d-flex flex-column col-8">
-        <video controls class="rounded-3">
-            <source src="/videos/2.mp4" type="video/mp4">
+        <video class="rounded-3" height="500" width="900" controls>
+            <source src="/videos/1.mp4"
+                    th:src="@{|/videos/${video.id}.mp4|}"
+                    type="video/mp4">
         </video>
-        <h5>개발과정 함께 보시죠~!</h5>
+        <h5 th:text="${video.videoName}">동영상 제목</h5>
     </div>
 <!--우측 열-->
 <div class="d-flex flex-column col-4" style="margin: 20px;">
-    <a href="/video/1">
+
+    <a th:each="video : ${videos}" href="/video/1" th:href="@{|/video/${video.id}|}">
     <div class="card w-100 border-0">
         <div class="row g-0">
             <div class="col-md-5">
-                <img src="/image/1.png" class="img-fluid rounded-pill" height="" alt="...">
+                <img src="/image/1.png"
+                     th:src="@{|/image/${video.id}.png|}"
+                     class="img-fluid rounded-pill" height="" alt="...">
             </div>
             <div class="col-md-7">
                 <div class="card-body">
-                    <h6 class="card-title">[백준] 달이 차오른다,가자 해설강의</h6>
+                    <h6 class="card-title" th:text="${video.videoName}">제목</h6>
                     <p class="card-text"><small class="text-muted">woody</small></p>
-                    <p class="card-text"><small class="text-muted">조회수 590회 · 방금 전</small></p>
-                </div>
-            </div>
-        </div>
-    </div></a>
-
-    <a href="/video/2">
-    <div class="card w-100 border-0" >
-        <div class="row g-0">
-            <div class="col-md-5">
-                <img src="/image/2.png" class="img-fluid rounded-pill" height="" alt="...">
-            </div>
-            <div class="col-md-7">
-                <div class="card-body">
-                    <h6 class="card-title">개발과정 함께 보시죠~!</h6>
-                    <p class="card-text"><small class="text-muted">woody</small></p>
-                    <p class="card-text"><small class="text-muted">조회수 590회 · 방금 전</small></p>
-                </div>
-            </div>
-        </div>
-    </div></a>
-
-
-    <a href="/video/3">
-    <div class="card w-100 border-0">
-        <div class="row g-0">
-            <div class="col-md-5">
-                <img src="/image/3.png" class="img-fluid rounded-pill" height="" alt="...">
-            </div>
-            <div class="col-md-7">
-                <div class="card-body">
-                    <h6 class="card-title">테스트 샘플 영상 입니다.</h6>
-                    <p class="card-text"><small class="text-muted">woody</small></p>
-                    <p class="card-text"><small class="text-muted">조회수 590회 · 방금 전</small></p>
+                    <p class="card-text"><small class="text-muted" th:text="'조회수 ' + ${video.clicked} + '회 · 방금 전'">조회수 590회 · 방금 전</small></p>
                 </div>
             </div>
         </div>
