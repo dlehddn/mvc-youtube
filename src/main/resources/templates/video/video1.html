@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/bootstrap.min.css}"
+            href="../css/bootstrap.min.css" rel="stylesheet">
+    <title>Title</title>
+    <style>
+        .container{
+            max-width: 95%;
+        }
+        .form-container {
+            width: 95%;
+            max-width: 800px; /* 원하는 최대 너비로 설정 */
+            margin: 0 auto; /* 폼을 가운데로 정렬 */
+        }
+        a {
+            text-decoration: none;
+            color:inherit;
+        }
+        .nav-link{
+            color:inherit;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+      <a class="navbar-brand " href="/">
+      <img src="../image/youtubeLogo.png" alt="Logo" width="110" height="45" class="d-inline-block align-text-top"></a>
+      <form class="d-flex form-container" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-secondary" type="submit">
+        Search
+        </button>
+      </form>
+      <a class="navbar-brand" href="#">
+      <img src="../image/login.png" alt="Logo" width="110" height="45" class="d-inline-block align-text-top"></a>
+  </div>
+</nav>
+
+
+<div class="d-flex container" style="height: 100vh;">
+<!--좌측 열-->
+    <div class="d-flex flex-column col-8">
+        <video controls class="rounded-3">
+            <source src="/videos/1.mp4" type="video/mp4">
+        </video>
+        <h5>[백준] 달이 차오른다,가자 해설강의</h5>
+    </div>
+<!--우측 열-->
+<div class="d-flex flex-column col-4" style="margin: 20px;">
+    <a href="/video/1">
+    <div class="card w-100 border-0">
+        <div class="row g-0">
+            <div class="col-md-5">
+                <img src="/image/1.png" class="img-fluid rounded-pill" height="" alt="...">
+            </div>
+            <div class="col-md-7">
+                <div class="card-body">
+                    <h6 class="card-title">[백준] 달이 차오른다,가자 해설강의</h6>
+                    <p class="card-text"><small class="text-muted">woody</small></p>
+                    <p class="card-text"><small class="text-muted">조회수 590회 · 방금 전</small></p>
+                </div>
+            </div>
+        </div>
+    </div></a>
+
+    <a href="/video/2">
+    <div class="card w-100 border-0" >
+        <div class="row g-0">
+            <div class="col-md-5">
+                <img src="/image/2.png" class="img-fluid rounded-pill" height="" alt="...">
+            </div>
+            <div class="col-md-7">
+                <div class="card-body">
+                    <h6 class="card-title">개발과정 함께 보시죠~!</h6>
+                    <p class="card-text"><small class="text-muted">woody</small></p>
+                    <p class="card-text"><small class="text-muted">조회수 590회 · 방금 전</small></p>
+                </div>
+            </div>
+        </div>
+    </div></a>
+
+
+    <a href="/video/3">
+    <div class="card w-100 border-0">
+        <div class="row g-0">
+            <div class="col-md-5">
+                <img src="/image/3.png" class="img-fluid rounded-pill" height="" alt="...">
+            </div>
+            <div class="col-md-7">
+                <div class="card-body">
+                    <h6 class="card-title">테스트 샘플 영상 입니다.</h6>
+                    <p class="card-text"><small class="text-muted">woody</small></p>
+                    <p class="card-text"><small class="text-muted">조회수 590회 · 방금 전</small></p>
+                </div>
+            </div>
+        </div>
+    </div></a>
+
+</div>
+
+</div>
+
+</body>
+</html>
